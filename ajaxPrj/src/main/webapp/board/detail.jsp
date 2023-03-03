@@ -170,7 +170,7 @@ a {
 <script type="text/javascript" >
 var loadData=function(writer){
 	$.ajax({
-		  url: 'http://localhost:8080/ajaxPrj/board/detail.do',
+		  url: 'http://192.168.99.100:8080/ajaxPrj/board/detail.do',
 		  type: 'get',
 		  contentType:'application/x-www-form-urlencoded; charset=UTF-8',
 		  data: {writer:writer},
@@ -192,7 +192,7 @@ var loadData=function(writer){
 
 
 var listLoading = function(){
-	$.get('http://localhost:8080/ajaxPrj/board/list.do', function(data){
+	$.get('http://192.168.99.100:8080/ajaxPrj/board/list.do', function(data){
 		console.log(data);
 		data.list.forEach(function(ele) {
 
@@ -212,7 +212,7 @@ var listLoading = function(){
 var update=function(){
 // 	console.log($('form').serialize());
 	$.ajax({
-		  url: 'http://localhost:8080/ajaxPrj/board/update.do',
+		  url: 'http://192.168.99.100:8080/ajaxPrj/board/update.do',
 		  type: 'post',
 		  contentType:'application/x-www-form-urlencoded; charset=UTF-8',
 		  data: $('form').serialize(),
@@ -227,7 +227,7 @@ var update=function(){
 };
 var del =function(){
 	$.ajax({
-		  url: 'http://localhost:8080/ajaxPrj/board/delete.do',
+		  url: 'http://192.168.99.100:8080/ajaxPrj/board/delete.do',
 		  type: 'get',
 		  contentType:'application/x-www-form-urlencoded; charset=UTF-8',
 		  data: $('form').serialize(),

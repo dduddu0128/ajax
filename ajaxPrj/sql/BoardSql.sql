@@ -16,3 +16,8 @@ INSERT INTO list VALUES(0, 'test02','user2', 'testing testing', current_date , 0
 INSERT INTO list VALUES(0, 'test03','user3', 'testing testing testing', current_date , 0);
 INSERT INTO list VALUES(0, 'test04', 'user4','testing testing testing testing', current_date , 0);
 INSERT INTO list VALUES(0, 'test05', 'user5','testing testing testing testing testing', current_date , 0);
+INSERT INTO list VALUES(0, 'test06', 'user6','testing testing testing testing testing', current_date , 0);
+INSERT INTO list VALUES(0, 'test07', 'user7','testing testing testing testing testing', current_date , 0);
+INSERT INTO list VALUES(0, 'test08', 'user8','testing testing testing testing testing', current_date , 0);
+INSERT INTO list VALUES(0, 'test09', 'user9','testing testing testing testing testing', current_date , 0);
+INSERT INTO list VALUES(0, 'test10', 'user10','testing testing testing testing testing', current_date , 0);

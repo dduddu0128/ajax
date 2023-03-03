@@ -17,6 +17,8 @@ public class AddController extends HttpServlet{
 
 		@Override
 		protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+			resp.setHeader("Access-Control-Allow-Origin", "*");
+		     resp.setHeader("Access-Control-Allow-Credentials", "true");
 			req.setCharacterEncoding("utf-8");
 			resp.setCharacterEncoding("utf-8");
 			

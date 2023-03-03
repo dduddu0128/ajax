@@ -16,6 +16,8 @@ public class ListController extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setHeader("Access-Control-Allow-Origin", "*");
+	      resp.setHeader("Access-Control-Allow-Credentials", "true");
 		BoardDao dao = new BoardDao();
 		req.setCharacterEncoding("utf-8");
 		resp.setCharacterEncoding("utf-8");
@@ -30,7 +32,6 @@ public class ListController extends HttpServlet{
 				out.println("{\"num\":"+bean.getNum()+", \"title\":\""+bean.getTitle()+"\", \"writer\":\""+bean.getWriter()+"\",\"conent\":\""+bean.getContent()+"\", \"regdate\":\""+bean.getRegdate()+"\",\"visitcnt\":"+bean.getVisitcnt()+"}");
 			}
 			out.println("]}");
-			System.out.println("json파일 생성 완료");
 	   }finally {
 		   if(out!=null)out.close();
 	 }

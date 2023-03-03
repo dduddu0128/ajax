@@ -16,26 +16,11 @@ import com.bit.ajax.model.BoardDto;
 
 public class UpdateController extends HttpServlet{
 	
-//		
-//	@Override
-//	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//		int empno=Integer.parseInt(req.getParameter("empno"));
-//		String ename=req.getParameter("ename");
-//		int sal=Integer.parseInt(req.getParameter("sal"));
-//		int comm=Integer.parseInt(req.getParameter("comm"));
-//		int mgr=Integer.parseInt(req.getParameter("mgr"));
-//		EmpDao dao=new EmpDao();
-//		try {
-//			dao.editOne(empno, ename, comm, sal, mgr);
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//		resp.sendRedirect("detail.do?idx="+empno);
-//	}
 
 		@Override
 		protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-			System.out.println("업데이트 도착");
+			resp.setHeader("Access-Control-Allow-Origin", "*");
+		      resp.setHeader("Access-Control-Allow-Credentials", "true");
 			req.setCharacterEncoding("utf-8");
 			resp.setCharacterEncoding("utf-8");
 			

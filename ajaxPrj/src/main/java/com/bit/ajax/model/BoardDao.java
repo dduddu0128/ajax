@@ -76,7 +76,6 @@ public class BoardDao {
 
 	public BoardDto findOne(String writer) {
 		String sql="select * from list where writer='"+ writer +"'";
-		System.out.println(sql);
 		BoardDto bean=new BoardDto();
 		try {
 			conn=Sql.getConnection();
@@ -104,8 +103,6 @@ public class BoardDao {
 	}
 
 	public void UpdateOne(String writer,String title, String content) throws SQLException{
-		System.out.println("update dao 도착");
-//		String sql = "update dept set dname=?,ename=? where deptno=?";
 		String sql="update list set title =?, content=? where writer=?";
 		try {
 			conn=Sql.getConnection();
@@ -129,7 +126,6 @@ public class BoardDao {
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, writer);
 			pstmt.executeUpdate();
-			System.out.println("update dao 성공");
 		}finally {
 			if(pstmt!=null)pstmt.close();
 			if(conn!=null)conn.close();
@@ -137,7 +133,6 @@ public class BoardDao {
 	}
 
 	public void countUp(String title) throws SQLException {
-		System.out.println("카운트업");
 		String sql="update list set visitcnt = visitcnt+1 where title=?";
 		try {
 			conn=Sql.getConnection();

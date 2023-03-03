@@ -208,7 +208,7 @@ a {
 <script type="text/javascript" src="../js/menu.js"></script>
 <script type="text/javascript" >
 var listLoading = function(){
-	$.get('http://localhost:8080/ajaxPrj/board/list.do', function(data){
+	$.get('http://192.168.99.100:8080/ajaxPrj/board/list.do', function(data){
 		console.log(data);
 		data.list.forEach(function(ele) {
 

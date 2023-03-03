@@ -14,7 +14,7 @@ public class Sql {
 	public static Connection getConnection() {
 		try {
 			if(conn==null || conn.isClosed()) {
-				System.out.println("db연결");
+				System.out.println("db연결 성공");
 				Class.forName(driver);
 				conn=DriverManager.getConnection(url, user, password);
 			}
